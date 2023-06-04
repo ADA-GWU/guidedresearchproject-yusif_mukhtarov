@@ -12,9 +12,7 @@ The repository is organized into the following folders:
 
 3. **Papers**: This folder contains research papers or articles related to image classification and machine learning. These resources serve as references for the project and provide background information on the various models and techniques explored.
 
-4. **Code**: The code folder includes implementation scripts, notebooks, or source code files used for conducting experiments and evaluations. It covers the different image classification models studied, along with any necessary preprocessing or post-processing steps.
-
-5. **reports**: The reports folder contains detailed reports summarizing the research methodology, experimental setup, and results obtained throughout the project. The reports provide in-depth analysis and interpretation of the findings, including discussions on the strengths and limitations of each image classification model.
+4. **reports**: The reports folder contains detailed reports summarizing the research methodology, experimental setup, and results obtained throughout the project. The reports provide in-depth analysis and interpretation of the findings, including discussions on the strengths and limitations of each image classification model.
 
 ## Project Objectives
 
