@@ -44,14 +44,16 @@ def load_data(data_dir,
                            noise_type,
                            noise_percentage,                           
                            transform,                           
-                           data_percentage=1):
+                           data_percentage=1,
+                           show_classes = False):
     
     if noise_type == "None":
         noise_type = ""
         noise_percentage = ""
     else:
+        noise_type = "/" + str(noise_type)
         noise_percentage = "/" + str(noise_percentage)
-    path = data_dir + "/" + noise_type + "/" + data_type + noise_percentage
+    path = data_dir + noise_type + "/" + data_type + noise_percentage
     print("path: ", path)
     dataset = ImageFolder(root=path, transform=transform)
     original_classes = dataset.classes 
@@ -75,9 +77,10 @@ def load_data(data_dir,
     sampler = SubsetRandomSampler(new_indices)
 
     dataloader = DataLoader(dataset, sampler=sampler, batch_size=batch_size)
-    get_length_per_class(dataloader, original_classes)
+
+    if show_classes:
+        get_length_per_class(dataloader, original_classes)
 
     return dataloader, length_dataset, original_classes
     
 
-   
