@@ -60,8 +60,6 @@ def load_data(data_dir,
 
     labels = dataset.targets
     class_to_idx = dataset.class_to_idx
-    
-
     needed_length = int(num_samples*data_percentage/100)
     expected_length_per_class = int(needed_length/len(original_classes))
     print(f"needed_length: {needed_length}, expected_length_per_class: {expected_length_per_class}")
@@ -77,6 +75,7 @@ def load_data(data_dir,
     sampler = SubsetRandomSampler(new_indices)
 
     dataloader = DataLoader(dataset, sampler=sampler, batch_size=batch_size)
+    get_length_per_class(dataloader, original_classes)
 
     return dataloader, length_dataset, original_classes
     
