@@ -45,7 +45,7 @@ def load_data(data_dir,
                            noise_percentage,                           
                            transform,                           
                            data_percentage=1,
-                           show_classes = False):
+                           show_classes = False, random_seed=21):
     
     if noise_type == "None":
         noise_type = ""
@@ -74,9 +74,11 @@ def load_data(data_dir,
         new_indices = indices
     length_dataset = len(new_indices)
     print("length of final dataset:", length_dataset)
-    sampler = SubsetRandomSampler(new_indices)
 
-    dataloader = DataLoader(dataset, sampler=sampler, batch_size=batch_size)
+    
+    # sampler = SubsetRandomSampler(new_indices)
+
+    dataloader = DataLoader(dataset, sampler=new_indices, batch_size=batch_size)
 
     if show_classes:
         get_length_per_class(dataloader, original_classes)

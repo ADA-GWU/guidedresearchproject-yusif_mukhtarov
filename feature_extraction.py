@@ -5,10 +5,12 @@ import pandas as pd
 from scipy import ndimage as nd
 from skimage.filters import sobel
 import random
+from skimage.util import img_as_ubyte
 
-def feature_extraction(img):
+def feature_extraction(img): 
     img = img.permute(1, 2, 0).numpy() 
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    img = img_as_ubyte(img)
 
     img2 = img.reshape(-1)
     df = pd.DataFrame()
@@ -50,7 +52,7 @@ def sample_images(data_loader, number_of_samples_per_class):
 
     sampled_images = {}
     for class_label in class_images:
-        sampled_images[class_label] = random.sample(class_images[class_label], number_of_samples_per_class)
+        sampled_images[class_label] = class_images[class_label][0:number_of_samples_per_class]
 
     return sampled_images
 
