@@ -1,0 +1,17 @@
+Class,Accuracy,Recall,Precision,F_score
+Bean,41.5,0.41,0.97,0.58
+Bitter_Gourd,99.0,0.99,0.47,0.64
+Bottle_Gourd,80.0,0.8,0.86,0.83
+Brinjal,34.0,0.34,0.99,0.51
+Broccoli,97.5,0.97,0.74,0.84
+Cabbage,22.0,0.22,0.98,0.36
+Capsicum,11.5,0.12,1.0,0.21
+Carrot,91.5,0.92,0.95,0.93
+Cauliflower,82.5,0.82,0.98,0.89
+Cucumber,97.5,0.97,0.47,0.63
+Papaya,88.5,0.89,0.73,0.8
+Potato,90.0,0.9,0.87,0.88
+Pumpkin,100.0,1.0,0.43,0.6
+Radish,60.0,0.6,1.0,0.75
+Tomato,45.5,0.46,1.0,0.63
+Total,69.4,0.69,0.83,0.67
